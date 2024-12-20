@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<passpoint-profile xmlns="urn:ietf:params:xml:ns:passpoint">
+  <!-- Идентификатор сети -->
+  <network-identifier>radius.openwifi.kz</network-identifier>
+  <friendly-name>Freedom Wi-Fi Secure</friendly-name>
+
+  <!-- Информация об OSU (Online Sign-Up) -->
+  <os-network-information>
+    <os-ssid>Testosu</os-ssid>
+    <osu-provider>
+      <osu-url>https://192.168.15.253/htdocs/signup.html</osu-url>
+      <osu-method>web</osu-method>
+    </osu-provider>
+  </os-network-information>
+
+  <!-- CA-сертификат для проверки безопасности -->
+  <ca-certificates>
+    <ca-certificate>
+      <url>https://192.168.15.253/htdocs/CEPO240703485483.cer</url>
+    </ca-certificate>
+  </ca-certificates>
+
+  <!-- Методы аутентификации -->
+  <authentication-methods>
+    <!-- EAP-SIM -->
+    <eap-method>
+      <eap-type>SIM</eap-type>
+    </eap-method>
+    <!-- EAP-TLS -->
+    <eap-method>
+      <eap-type>TLS</eap-type>
+    </eap-method>
+    <!-- EAP-TTLS с внутренним методом MSCHAPv2 -->
+    <eap-method>
+      <eap-type>TTLS</eap-type>
+      <ttls>
+        <inner-method>MSCHAPv2</inner-method>
+      </ttls>
+    </eap-method>
+  </authentication-methods>
+
+  <!-- Информация о провайдере -->
+  <service-provider>
+    <service-provider-name>radius.openwifi.kz</service-provider-name>
+    <operator-name>radius.openwifi.kz</operator-name>
+    <operator-icon>https://192.168.15.253/htdocs/operator-icon.png</operator-icon>
+  </service-provider>
+</passpoint-profile>

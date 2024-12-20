@@ -1,0 +1,73 @@
+
+Файл signup.html — это веб-страница, которая используется в процессе OSU (Online Sign-Up) для получения профиля Wi-Fi Passpoint на устройстве. Он может содержать инструкции, запросы на аутентификацию или просто информацию о том, что устройство должно выполнить в процессе подключения. В большинстве случаев это страница с кнопками или инструкциями для перехода к следующему этапу.
+
+Что должно быть в signup.html?
+В простом варианте signup.html для использования с OSU сервером можно включить такие элементы:
+
+Приветствие и инструкции для пользователя: Страница может приветствовать пользователя и объяснять, что он должен сделать, чтобы подключиться к сети.
+
+Кнопка для получения профиля: На странице должна быть кнопка или ссылка, которая позволит пользователю получить профиль Wi-Fi (файл .xml).
+
+Указание на сертификаты: Если требуется, на странице можно указать ссылку для загрузки сертификатов.
+
+Пример простого signup.html:
+html
+Копировать код
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Freedom Wi-Fi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .heading {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .description {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="heading">Welcome to Freedom Wi-Fi!</h1>
+    <p class="description">Please click the button below to download and install the Wi-Fi profile on your device. After installation, you will be securely connected to our Wi-Fi network.</p>
+    <a href="https://192.168.15.253/profile.xml" class="btn" download>Download Wi-Fi Profile</a>
+</div>
+
+</body>
+</html>
